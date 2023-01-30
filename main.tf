@@ -78,7 +78,7 @@ resource "kubernetes_service" "example" {
       test = "MyExampleApp"
     }
 
-    type = "NodePort"
+    type = "LoadBalancer"
 
     port {
       name = "http"

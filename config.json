@@ -1,0 +1,9 @@
+{
+    "modelName": "xgb0124",
+    "uri": "file:/models/xgboost0124.zip",
+    "config": {
+        "memoryTimeout": 21474835,
+        "diskTimeout": 21474835
+    },
+    "force": false
+}
