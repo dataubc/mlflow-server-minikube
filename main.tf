@@ -2,7 +2,7 @@ terraform {
   required_providers {
     kubernetes = {
       source = "hashicorp/kubernetes"
-      version = "2.11.0"
+      version = "2.17.0"
     }
   }
 }
@@ -78,7 +78,7 @@ resource "kubernetes_service" "example" {
       test = "MyExampleApp"
     }
 
-    type = "LoadBalancer"
+    type = "NodePort"
 
     port {
       name = "http"
@@ -86,4 +86,6 @@ resource "kubernetes_service" "example" {
       target_port = 65327
     }
   }
+  depends_on = [kubernetes_deployment.example]
+
 }
